@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: grid;
+            gap: 5px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 100px 100px 100px 100px;
+        }
+        .item{
+            background-color: rgb(40, 179, 243);
+            border: 1px solid blueviolet; 
+            border-radius: 5px;
+        }
+        .item1{
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .item1:hover{
+            background-color: brown;
+            transition: ;
+        }
+        .item2:hover{
+            background-color: rgb(42, 165, 89);
+        }
+        .item2{
+            background-color: burlywood;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .item4{
+            /* grid-column-start: 3;
+            grid-column-end: ;
+            grid-row-start: 2;
+            grid-row-end: 4; */
+        }
+        .item8{
+             grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 6;
+            background-color: darkcyan;
+        }
+        .item12{
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item">3</div>
+        <div class="item item4">4</div>
+        <div class="item">5</div>
+        <!-- <div class="item">6</div> -->
+        <div class="item">7</div>
+        <div class="item item8">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item item12">12</div>
+    </div>
+</body>
+</html>
