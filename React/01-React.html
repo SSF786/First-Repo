@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic React</title>
+  </head>
+  <body>
+
+    <!-- Normal HTML -->
+
+    <h1>Hello World! from normal HTML</h1>
+
+    <!-- jsx -->
+
+    <div id="root"></div>
+
+    <!-- importing React and ReactDOM libraries from CDN to use React in our project -->
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <!-- Main concepts of React: -->
+
+    <!-- Main steps to create a React app:
+    1. Create a React element using React.createElement() method.
+    2. Create a root using ReactDOM.createRoot() method.
+    3. Render the React element using root.render() method.
+    4. React uses a virtual DOM to update the UI efficiently. 
+    5. React components can be created using functions or classes. -->
+    
+    <script>
+
+     // <!-- Creating H1 element using React.createElement() method -->
+
+      const h1 = React.createElement(
+        "h1",
+         { id: "h1", class: "h1class", xyz: "abc" },
+          "I am h1 tag",
+       );
+      //  const root = ReactDOM.createRoot(document.getElementById("root"));
+      //  root.render(h1);
+
+
+     //  <!-- Creating a H1 element inside a div tag using React.createElement() method -->
+
+      const divParent = React.createElement(
+           "div",
+           { id: "parent" },
+           React.createElement(
+             "h1",
+             { id: "h1child" },
+             "hello i am inside div tag",
+           ),
+          );
+          // const root = ReactDOM.createRoot(document.getElementById("root"));
+          // root.render(divParent);
+
+       // <!-- Creating a div tag with two child elements (h1 and p) using React.createElement() method -->
+
+      const parentDiv = React.createElement(
+        "div",
+        { id: "parent" },
+        React.createElement("div", { id: "child" }, [
+          React.createElement("h1", { id: "child1" }, "innerChild1"),
+          React.createElement("p", { id: "ptag" }, "I am p tag"),
+        ]),
+      );
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(parentDiv);
+
+    </script>
+    
+  </body>
+</html>
